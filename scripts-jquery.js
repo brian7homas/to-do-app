@@ -9,7 +9,6 @@ function newItem(){
   }else{
     let list = $('#list');
     list.append(text);
-    console.log(text)
   }
   
   function crossOut(){
@@ -19,5 +18,10 @@ function newItem(){
   $('.list-item').dblclick(function(){
     crossOut()
   });
+  
+  //3
+  $('#list').append(document.createElement('crossOutButton'));
+  $('crossOutButton').append(document.createTextNode("X"));
+  $('crossOutButton').appendTo('.list-item');
 }
 
