@@ -1,5 +1,5 @@
 function newItem(){
-  let li = $('<li></li>');
+  let li = $('<li class="list-item"></li>');
   let inputValue = $('input').val()
   let text = li.append(document.createTextNode(inputValue))
   
@@ -11,5 +11,13 @@ function newItem(){
     list.append(text);
     console.log(text)
   }
+  
+  function crossOut(){
+    li.toggleClass('strike')
+  }
+  
+  $('.list-item').dblclick(function(){
+    crossOut()
+  });
 }
 
