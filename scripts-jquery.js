@@ -1,6 +1,6 @@
 function newItem(){
   //create and validate text value
-  let li = $('<li class="list-item"></li>');
+  let li = $('<li class="list-item"></li>');  
   let crossOutButton = $('<crossOutButton></crossOutButton>');
   let inputValue = $('input').val()
   let text = li.append(document.createTextNode(inputValue))
